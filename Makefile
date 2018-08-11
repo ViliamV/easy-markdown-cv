@@ -1,3 +1,5 @@
+dir = source
+
 .PHONY: all
 all: html pdf
 
@@ -6,20 +8,44 @@ html:
 	pandoc -s --to=html5 \
 		-o build/cv.html \
 		source/*.md \
-		--css=../style/all.min.css \
-		--css=../style/normalize.css \
-		--css=../style/style.css \
-		--template=./style/template.html
+		--css=../css/all.min.css \
+		--css=../css/normalize.css \
+		--css=../css/style.css \
+		--template=./template/template.html
 
 .PHONY: pdf
 pdf:
-	wkhtmltopdf --print-media-type --orientation Portrait --page-size A4 --margin-top 15 --margin-left 15 --margin-right 15 --margin-bottom 15 build/cv.html build/cv.pdf
-	# pandoc -s \
-	# 	-o build/cv.pdf \
-	# 	build/cv.html \
-	# 	--css=./style/all.min.css \
-	# 	--pdf-engine=wkhtmltopdf
+	wkhtmltopdf --print-media-type --orientation Portrait --page-size A4 --margin-top 0 --margin-left 15 --margin-right 15 --margin-bottom 15 build/cv.html build/cv.pdf
+	wkhtmltopdf \
+		--print-media-type \
+		--orientation Portrait \
+		--page-size A4 \
+		--margin-top 0 \
+		--margin-left 15 \
+		--margin-right 15 \
+		--margin-bottom 15 \
+		build/cv.html \
+		build/cv.pdf
+
+.PHONY: example
+example:
+	pandoc -s --to=html5 \
+		-o cv.html \
+		example/*.md \
+		--css=./css/all.min.css \
+		--css=./css/normalize.css \
+		--css=./css/style.css \
+		--template=./template/template.html
+	wkhtmltopdf \
+		--print-media-type \
+		--orientation Portrait \
+		--page-size A4 \
+		--margin-top 0 \
+		--margin-left 15 \
+		--margin-right 15 \
+		--margin-bottom 15 \
+		cv.html \
+		cv.pdf
 
 clean:
 	rm build/* -f
-		--css=./source/style.css \

@@ -35,19 +35,19 @@ body {
 
 a {
   color: #0645ad;
-  color: var(--special)
+  color: var(--fg-light)
   text-decoration: none;
 }
 
 a:visited {
   color: #0b0080;
-  color: var(--special);
+  color: var(--fg-light);
   text-decoration: none;
 }
 
 a:hover {
   color: #06e;
-  color: var(--special-light);
+  color: var(--special);
   text-decoration: underline;
 }
 
@@ -315,6 +315,7 @@ table td {
 
   a, a:visited {
     text-decoration: underline;
+    color: var(--fg);
   }
 
   hr {
@@ -365,4 +366,12 @@ table td {
   h2, h3 {
     page-break-after: avoid;
   }
+}
+
+.line-block {
+  margin-top: 1em;
+}
+
+i {
+  color: var(--special);
 }

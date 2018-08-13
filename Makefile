@@ -1,4 +1,4 @@
-dir = source
+dir = src
 
 .PHONY: all
 all: html pdf
@@ -7,11 +7,23 @@ all: html pdf
 html:
 	pandoc -s --to=html5 \
 		-o build/cv.html \
-		source/*.md \
+		src/*.md \
 		--css=../css/all.min.css \
 		--css=../css/normalize.css \
 		--css=../css/style.css \
 		--template=./template/template.html
+
+.PHONY: debug
+debug:
+	pandoc -s --to=html5 \
+		-o build/cv.html \
+		src/*.md \
+		--css=../css/debug.css \
+		--css=../css/all.min.css \
+		--css=../css/normalize.css \
+		--css=../css/style.css \
+		--template=./template/template.html
+
 
 .PHONY: pdf
 pdf:

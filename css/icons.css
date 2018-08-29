@@ -1,0 +1,119 @@
+.fa:before,.fab:before,.fal:before,.far:before,.fas:before {
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-font-smoothing:antialiased;
+    display:inline-block;
+    font-style:normal;
+    font-variant:normal;
+    text-rendering:auto;
+    line-height:1
+}
+
+.far:before {
+  font-family:"FA Regular";
+  font-weight: 400;
+}
+
+.fa:before, .fas:before {
+  font-weight:900;
+  font-family: "FA Solid";
+}
+ .fab:before {
+    font-family:"FA Brands"
+}
+i {
+  color: var(--sp);
+}
+
+h2:before, span:before, li:before, span:after {
+  font-weight: 900;
+  font-family: "FA Brands", "FA Solid";
+  color: var(--sp);
+  padding: 0 0.25em;
+}
+
+#address:before {
+  content: "\f2bb";
+}
+
+#email:before {
+  content: "\f0e0";
+}
+
+#phone:before {
+  content: "\f3cd";
+}
+
+#website:before {
+  content: "\f0c1";
+}
+
+#github:before {
+  content: "\f09b";
+}
+
+#gitlab:before {
+  content: "\f296";
+}
+
+
+#education:before {
+  content: "\f19d";
+}
+
+#experience:before {
+  content: "\f0b1";
+}
+
+#skills:before {
+  content: "\f0ad";
+}
+
+#publications:before {
+  content: "\f518";
+}
+
+#open-source-projects:before {
+  /* content: "\f41a"; */
+  content: "\f121";
+}
+
+#references:before {
+  content: "\f2b5";
+}
+
+#interests:before {
+  content: "\f004";
+}
+
+#js:before {
+  content: "\f3b8";
+}
+
+span:after, #star:before {
+  content: "\f005";
+}
+
+#html:before {
+  content: "\f13b";
+}
+
+#css:before {
+  content: "\f38b";
+}
+
+#md:before {
+  content: "\f60f";
+}
+
+
+.great:after {
+  color: var(--sp);
+}
+
+.good:after {
+  color: var(--fg);
+}
+
+.ok:after {
+  color: var(--fg-light);
+}

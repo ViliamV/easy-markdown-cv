@@ -1,18 +1,17 @@
 ## Education
 
-### Best University
-> 2017-2018
+2016--2018
+:   **Master's Degree**, *Best University*
 
-#### Masters Degree
+    **Courses:**
+    Class 1
+    Class 2
 
-- Some class
-- Another class
+    **Research Grant:** *Name*, 2017
 
-> 2014-2017
+2014--2016
+:   **Bachelor's Degree**, *Best University*
 
-#### BA
-
-- Easy class
-- Not so easy class
-
-
+    **Courses:**
+    Class 1
+    Class 2

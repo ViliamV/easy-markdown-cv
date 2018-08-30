@@ -16,7 +16,7 @@ case $1 in
   ;;
   example)
     indir="example/"
-    outdir="."
+    outdir="example_build/"
     css_path="./css/"
   ;;
 esac
@@ -31,7 +31,7 @@ cat ${css} > ${outdir}${css_final}
 # copy fonts
 cp -ru ${fonts} ${outdir}
 # copy images
-cp -ru ${indir}${images} ${outdir}
+cp -ru ${indir}${images} ${outdir} 2> /dev/null
 
 echo "running pandoc"
 pandoc -s \
@@ -54,5 +54,12 @@ if [[ "$1" = "pdf" ]] || [[ "$1" = "example" ]]; then
     --margin-bottom 15 \
     $outdir/cv.html \
     $outdir/cv.pdf
+fi
+
+if [[ "$1" = "example" ]]; then
+  echo "running wkhtmltoimage"
+  wkhtmltoimage \
+    $outdir/cv.html \
+    $outdir/cv.jpg
 fi
 exit

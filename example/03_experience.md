@@ -1,13 +1,19 @@
 ## Experience
 
-### Best company
+Oct. 2016--Jun. 2018
+:   **Developer**, *Best company*\
+    City, Country
 
-> 2016-2018
+    **Responsibilities:**
+    Frontend and backend web development,
 
-#### Developer
+    **Projects:**
+    That big project\
 
-### Second best company
 
-> 2015-2016
+Sep. 2015--Sep. 2016
+:   **Intern**, *Second best company*\
+    City, Country
 
-#### Intern
+    **Responsibilities:**
+    Make coffee

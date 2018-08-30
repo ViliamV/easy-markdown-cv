@@ -45,7 +45,6 @@ pandoc -s \
 if [[ "$1" = "pdf" ]] || [[ "$1" = "example" ]]; then
   echo "running wkhtmltopdf"
   wkhtmltopdf \
-    --print-media-type \
     --orientation Portrait \
     --page-size A4 \
     --margin-top 15 \

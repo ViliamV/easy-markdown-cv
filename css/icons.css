@@ -1,119 +1,78 @@
-.fa:before,.fab:before,.fal:before,.far:before,.fas:before {
-    -moz-osx-font-smoothing:grayscale;
-    -webkit-font-smoothing:antialiased;
-    display:inline-block;
-    font-style:normal;
-    font-variant:normal;
-    text-rendering:auto;
-    line-height:1
-}
-
-.far:before {
-  font-family:"FA Regular";
-  font-weight: 400;
-}
-
-.fa:before, .fas:before {
-  font-weight:900;
-  font-family: "FA Solid";
-}
- .fab:before {
-    font-family:"FA Brands"
-}
-i {
-  color: var(--sp);
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?xgje6t');
+  src:  url('fonts/icomoon.eot?xgje6t#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xgje6t') format('truetype'),
+    url('fonts/icomoon.woff?xgje6t') format('woff'),
+    url('fonts/icomoon.svg?xgje6t#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 h2:before, span:before, li:before, span:after {
-  font-weight: 900;
-  font-family: "FA Brands", "FA Solid";
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--sp);
-  padding: 0 0.25em;
+  margin-right: 0.25em;
 }
 
-#address:before {
-  content: "\f2bb";
+h2:before {
+  font-size: 0.85em;
 }
 
-#email:before {
-  content: "\f0e0";
+.icon-award:before {
+  content: "\e909";
 }
-
-#phone:before {
-  content: "\f3cd";
+#education:before, .icon-book-open:before {
+  content: "\e90b";
 }
-
-#website:before {
-  content: "\f0c1";
+#experience:before, .icon-briefcase:before {
+  content: "\e900";
 }
-
-#github:before {
-  content: "\f09b";
+.icon-code:before {
+  content: "\e90c";
 }
-
-#gitlab:before {
-  content: "\f296";
+#publications:before, .icon-file-text:before {
+  content: "\e90f";
 }
-
-
-#education:before {
-  content: "\f19d";
+#github:before, .icon-github:before {
+  content: "\e901";
 }
-
-#experience:before {
-  content: "\f0b1";
+#gitlab:before, .icon-gitlab:before {
+  content: "\e902";
 }
-
-#skills:before {
-  content: "\f0ad";
+#interests:before, .icon-heart:before {
+  content: "\e903";
 }
-
-#publications:before {
-  content: "\f518";
+#homepage:before, .icon-home:before {
+  content: "\e904";
 }
-
-#open-source-projects:before {
-  /* content: "\f41a"; */
-  content: "\f121";
+#linkedin:before, .icon-linkedin:before {
+  content: "\e912";
 }
-
-#references:before {
-  content: "\f2b5";
+#mail:before, .icon-mail:before {
+  content: "\e905";
 }
-
-#interests:before {
-  content: "\f004";
+#address:before, .icon-map-pin:before {
+  content: "\e907";
 }
-
-#js:before {
-  content: "\f3b8";
+#phone:before, .icon-phone:before {
+  content: "\e915";
 }
-
-span:after, #star:before {
-  content: "\f005";
+#skills:before, .icon-star:before {
+  content: "\e917";
 }
-
-#html:before {
-  content: "\f13b";
+#open-source-projects:before, .icon-terminal:before {
+  content: "\e908";
 }
-
-#css:before {
-  content: "\f38b";
-}
-
-#md:before {
-  content: "\f60f";
-}
-
-
-.great:after {
-  color: var(--sp);
-}
-
-.good:after {
-  color: var(--fg);
-}
-
-.ok:after {
-  color: var(--fg-light);
+#references:before, .icon-users:before {
+  content: "\e906";
 }

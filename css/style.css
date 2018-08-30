@@ -39,6 +39,10 @@ body {
   background: var(--bg);
 }
 
+p {
+  margin: 0.5em 0;
+}
+
 header {
   display: flex;
   flex-direction: row;
@@ -89,7 +93,7 @@ a::selection {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--fg);
-  line-height: 125%;
+  line-height: 100%;
   font-weight: 300;
   font-family: var(--h-family);
   padding: 0;
@@ -103,6 +107,7 @@ h4, h5, h6 {
 h1 {
   font-size: 3.5em;
   font-weight: 100;
+  line-height: 125%;
 }
 
 h2 {
@@ -237,20 +242,4 @@ dd:last-child {
 #name h1 strong {
   color: var(--sp);
   letter-spacing: 0px;
-}
-
-.legend {
-  position: relative;
-  width: 10em;
-  float: right;
-  text-align: right;
-}
-
-.legend p {
-  padding: 0;
-  margin: 0;
-}
-.legend h4 {
-  margin-bottom: 0;
-  margin-right: 1.25em;
 }

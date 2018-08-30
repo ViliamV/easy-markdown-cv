@@ -35,6 +35,7 @@ cp -ru ${indir}${images} ${outdir}
 
 echo "running pandoc"
 pandoc -s \
+  --from=markdown+smart \
   --to=html5 \
   -o $outdir/cv.html \
   $indir/*.md \

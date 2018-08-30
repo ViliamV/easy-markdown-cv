@@ -56,16 +56,18 @@
 }
 
   p, h2, h3 {
-    orphans: 3;
-    widows: 3;
+    orphans: 4;
+    widows: 4;
+    page-break-inside: avoid !important;
   }
 
-  h2, h3 {
+  h2, h3, h4 {
     page-break-after: avoid !important;
+    break-after: avoid !important;
   }
   h1, h2, ul, li {
     page-break-after: avoid !important;
-    page-break-inside: avoid;
+    page-break-inside: avoid !important;
   }
 }
 

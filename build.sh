@@ -48,8 +48,8 @@ if [[ "$1" = "pdf" ]] || [[ "$1" = "example" ]]; then
     --orientation Portrait \
     --page-size A4 \
     --margin-top 15 \
-    --margin-left 25 \
-    --margin-right 25 \
+    --margin-left 15 \
+    --margin-right 15 \
     --margin-bottom 15 \
     $outdir/cv.html \
     $outdir/cv.pdf

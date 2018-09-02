@@ -70,7 +70,7 @@ h2:before {
 #skills:before, .icon-star:before {
   content: "\e917";
 }
-#open-source-projects:before, .icon-terminal:before {
+#side-projects:before, .icon-terminal:before {
   content: "\e908";
 }
 #references:before, .icon-users:before {

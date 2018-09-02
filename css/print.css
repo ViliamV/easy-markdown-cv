@@ -1,4 +1,7 @@
 @media print {
+  :root {
+    --t-family: "Roboto Slab Italic", serif;
+  }
   * {
     background: white !important;
     /* color: black !important; */
@@ -47,13 +50,13 @@
     max-width: 100% !important;
   }
 
-  @page :left {
-    margin: 15mm 20mm 15mm 10mm;
-}
+  /* @page :left { */
+  /*   margin: 15mm 20mm 15mm 10mm; */
+/* } */
 
-  @page :right {
-    margin: 15mm 10mm 15mm 20mm;
-}
+  /* @page :right { */
+  /*   margin: 15mm 10mm 15mm 20mm; */
+/* } */
 
   p, h2, h3 {
     orphans: 4;
@@ -68,6 +71,13 @@
   h1, h2, ul, li {
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
+  }
+  .new-page {
+    page-break-before: always !important;
+    border-top: none;
+  }
+  em {
+    font-style: italic;
   }
 }
 

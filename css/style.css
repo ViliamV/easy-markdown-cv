@@ -9,13 +9,13 @@
   /* --fg-light: #4e6c79; */
   /* --fg-light: #506771; */
   --fg-light: #4e656d;
-  --sp: #20b1f4;
+  /* --sp: #20b1f4; */
   --sp-light: #79d3ff;
   /* --sp2: #D8315B; */
   --t-family: "Roboto Slab", serif;
   --h-family: Roboto, sans-serif;
   --column-2: 10em;
-  --max-width: 50em;
+  --max-width: 55em;
   --min-width: 300px;
 }
 
@@ -32,7 +32,7 @@ body {
   font-family: var(--t-family);
   font-size: 16px;
   line-height: 1.5;
-  padding: 2em 0;
+  padding: 3em 0;
   margin: auto;
   max-width: var(--max-width);
   min-width: var(--min-width);
@@ -48,6 +48,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 a {
@@ -120,6 +121,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  margin-top: 1em;
 }
 
 h4 {

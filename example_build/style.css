@@ -93,7 +93,7 @@ h2:before {
 #skills:before, .icon-star:before {
   content: "\e917";
 }
-#open-source-projects:before, .icon-terminal:before {
+#side-projects:before, .icon-terminal:before {
   content: "\e908";
 }
 #references:before, .icon-users:before {
@@ -451,13 +451,13 @@ template {
   /* --fg-light: #4e6c79; */
   /* --fg-light: #506771; */
   --fg-light: #4e656d;
-  --sp: #20b1f4;
+  /* --sp: #20b1f4; */
   --sp-light: #79d3ff;
   /* --sp2: #D8315B; */
   --t-family: "Roboto Slab", serif;
   --h-family: Roboto, sans-serif;
   --column-2: 10em;
-  --max-width: 50em;
+  --max-width: 55em;
   --min-width: 300px;
 }
 
@@ -474,7 +474,7 @@ body {
   font-family: var(--t-family);
   font-size: 16px;
   line-height: 1.5;
-  padding: 2em 0;
+  padding: 3em 0;
   margin: auto;
   max-width: var(--max-width);
   min-width: var(--min-width);
@@ -490,6 +490,7 @@ header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 3em;
 }
 
 a {
@@ -562,6 +563,7 @@ h2 {
 
 h3 {
   font-size: 1.5em;
+  margin-top: 1em;
 }
 
 h4 {
@@ -686,6 +688,9 @@ dd:last-child {
   letter-spacing: 0px;
 }
 @media print {
+  :root {
+    --t-family: "Roboto Slab Italic", serif;
+  }
   * {
     background: white !important;
     /* color: black !important; */
@@ -734,13 +739,13 @@ dd:last-child {
     max-width: 100% !important;
   }
 
-  @page :left {
-    margin: 15mm 20mm 15mm 10mm;
-}
+  /* @page :left { */
+  /*   margin: 15mm 20mm 15mm 10mm; */
+/* } */
 
-  @page :right {
-    margin: 15mm 10mm 15mm 20mm;
-}
+  /* @page :right { */
+  /*   margin: 15mm 10mm 15mm 20mm; */
+/* } */
 
   p, h2, h3 {
     orphans: 4;
@@ -756,17 +761,25 @@ dd:last-child {
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
   }
+  .new-page {
+    page-break-before: always !important;
+    border-top: none;
+  }
+  em {
+    font-style: italic;
+  }
 }
 
-@media only screen and (max-width: 860px) {
+@media only screen and (max-width: 950px) {
   body {
-  /* padding: 2em 30px; */
+  padding: 2em 0;
   margin: 0 30px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   body {
+    padding: 1em 0;
     font-size: 14px;
   }
   :root {

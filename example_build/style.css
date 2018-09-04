@@ -673,9 +673,6 @@ dd:last-child {
   letter-spacing: 0px;
 }
 @media print {
-  :root {
-    --t-family: "Roboto Slab Italic", serif;
-  }
   * {
     background: white !important;
     /* color: black !important; */
@@ -689,6 +686,7 @@ dd:last-child {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    font-family: "Roboto Slab Italic", serif;
   }
 
   dt {

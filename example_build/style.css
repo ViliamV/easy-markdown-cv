@@ -474,7 +474,9 @@ body {
   font-family: var(--t-family);
   font-size: 16px;
   line-height: 1.5;
-  padding: 3em 0;
+  padding: 0;
+  padding-top: 3em;
+  padding-bottom: 2em;
   margin: auto;
   max-width: var(--max-width);
   min-width: var(--min-width);
@@ -491,6 +493,11 @@ header {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 3em;
+}
+
+footer {
+  margin-top: 5em;
+  text-align: right;
 }
 
 a {
@@ -556,8 +563,8 @@ h1 {
 h2 {
   letter-spacing: 2px;
   font-size: 1.75em;
-  margin-top: .5em;
-  padding-top: .5em;
+  padding-top: 0.5em;
+  margin-top: 0.5em;
   border-top: 2px solid var(--sp);
 }
 
@@ -579,11 +586,9 @@ h6 {
 }
 
 blockquote {
-  /* color: var(--sp2); */
   margin: 0.5em 0;
-  /* padding-left: 3em; */
-  /* border-left: 0.5em #EEE solid; */
 }
+
 blockquote p {
   margin: 0;
 }
@@ -613,7 +618,7 @@ li p:last-child {
 }
 
 ul ul, ol ol {
-  margin: .3em 0;
+  margin: .25em 0;
 }
 
 dl {
@@ -765,8 +770,9 @@ dd:last-child {
     page-break-before: always !important;
     border-top: none;
   }
-  em {
-    font-style: italic;
+
+  footer {
+    display: none;
   }
 }
 
@@ -793,19 +799,7 @@ dd:last-child {
   dd {
     margin-top: 0;
   }
-  .legend {
-    width: unset;
-    float: unset;
-    position: unset;
-    text-align: unset;
-  }
-  .item {
-    grid-template-columns: auto;
-    grid-template-rows: 1.75em auto auto auto auto;
-  }
-  .item p img {
-    display: none;
-  }
+
   #details {
     text-align: left;
     margin-left: 0;
@@ -818,6 +812,12 @@ dd:last-child {
   header {
     padding-top: 0;
     flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3em;
   }
 
   .logo {

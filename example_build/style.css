@@ -541,7 +541,7 @@ h2 {
   font-size: 1.75em;
   padding-top: 0.5em;
   margin-top: 0.5em;
-  border-top: #20b1f4;
+  border-top: 2px solid #20b1f4;
   border-top: 2px solid var(--sp);
 }
 

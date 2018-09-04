@@ -20,7 +20,7 @@ installed in order to create HTML (pandoc) and PDF (wkhtmltopdf) files.
     02_experience.md  04_publications.md  06_side_projects.md  img/
     ```
 
-  notice the directory `img`, it contains the profile photo.
+    notice the directory `img`, it contains the profile photo.
 - first file should contain header for pandoc that looks something like this
 
     ```yaml
@@ -72,10 +72,15 @@ For example Education and Experience.
 
 ```markdown
 2016--2018
-:   **Master's Degree in Mathematics**, *Charles University*\
-    Prague, Czech Republic
+:   **Master's Degree**, *Some University*\
+    City, State
 
 ```
+TODO: picture
+
+### Custom highlight color
+
+configured in header file in `src/01_basics.md`
 TODO: picture
 
 ## Example CV

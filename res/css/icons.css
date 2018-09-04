@@ -20,6 +20,7 @@ h2:before, span:before, li:before, span:after {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #20b1f4;
   color: var(--sp);
   margin-right: 0.25em;
 }

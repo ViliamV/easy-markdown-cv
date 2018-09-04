@@ -10,16 +10,15 @@
     padding: 1em 0;
     font-size: 14px;
   }
-  :root {
-    --column-2: 0;
-  }
   dt {
     position: unset;
     text-align: unset;
     margin: 0.5em 0;
+    width: unset;
   }
   dd {
     margin-top: 0;
+    margin-left: 0;
   }
 
   #details {

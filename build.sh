@@ -2,7 +2,7 @@
 
 indir="src/"
 outdir="build/"
-css_files=(fonts icons normalize style print media)
+css_files=(icons normalize style print media)
 css_path="./res/css/"
 css_final="style.css"
 template="--template=./res/template.html"

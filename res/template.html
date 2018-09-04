@@ -6,34 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
     <style type="text/css">
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
-$if(quotes)$
-q { quotes: "“" "”" "‘" "’"; }
-$endif$
-$if(color)$
-:root {--sp: $color$;}
-$else$
-:root {--sp: #20b1f4;}
-$endif$
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+      $if(quotes)$
+      q { quotes: "“" "”" "‘" "’"; }
+      $endif$
+      $if(color)$
+      :root {--sp: $color$;}
+      $else$
+      :root {--sp: #20b1f4;}
+      $endif$
     </style>
-    $if(highlighting-css)$
-    <style type="text/css">
-$highlighting-css$
-    </style>
-    $endif$
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,400,700" rel="stylesheet">
     $for(css)$
     <link rel="stylesheet" href="$css$" />
-    $endfor$
-
-    $if(math)$
-    $math$
-    $endif$
-    $for(header-includes)$
-    $header-includes$
     $endfor$
   </head>
   <body>
@@ -50,18 +38,29 @@ $highlighting-css$
       </div>
       <div id="details">
         <ul>
-          $if(address)$
-          <li id="address">$address$</li>
+          $if(public)$
+            $if(public-email)$
+              <li id="mail"><a href="mailto:$public-email$">Contact</a></li>
+            $else$
+              $if(email)$
+                <li id="mail"><a href="mailto:$email$">Contact</a></li>
+              $endif$
+            $endif$
+          $else$
+            $if(address)$
+              <li id="address">$address$</li>
+            $endif$
+            $if(email)$
+              <li id="mail"><a href="mailto:$email$">$email$</a></li>
+            $endif$
+            $if(website)$
+              <li id="homepage"><a href="https://$website$/" target="_blank">$website$</a></li>
+            $endif$
+            $if(mobile)$
+              <li id="phone">$mobile$</li>
+            $endif$
           $endif$
-          $if(email)$
-          <li id="mail"><a href="mailto:$email$" target="_blank">$email$</a></li>
-          $endif$
-          $if(website)$
-          <li id="homepage"><a href="https://$website$/" target="_blank">$website$</a></li>
-          $endif$
-          $if(mobile)$
-          <li id="phone">$mobile$</li>
-          $endif$
+
           $if(github)$
           <li id="github"><a href="https://github.com/$github$" target="_blank">$github$</a></li>
           $endif$
@@ -75,5 +74,8 @@ $highlighting-css$
     $for(include-after)$
     $include-after$
     $endfor$
+    <footer>
+      Created using <a href="https://gitlab.com/ViliamV/easy-markdown-cv" target="_blank">Easy Markdown CV</a>
+    </footer>
   </body>
 </html>

@@ -1,5 +1,5 @@
 .PHONY: all
-all: pdf
+all: pdf public
 
 .PHONY: html
 html:
@@ -12,6 +12,10 @@ debug:
 .PHONY: pdf
 pdf:
 	./build.sh pdf
+
+.PHONY: public
+public:
+	./build.sh public
 
 .PHONY: example
 example:

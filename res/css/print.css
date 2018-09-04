@@ -76,8 +76,9 @@
     page-break-before: always !important;
     border-top: none;
   }
-  em {
-    font-style: italic;
+
+  footer {
+    display: none;
   }
 }
 

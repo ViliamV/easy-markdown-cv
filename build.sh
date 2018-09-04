@@ -3,12 +3,13 @@
 indir="src/"
 outdir="build/"
 css_files=(fonts icons normalize style print media)
-css_path="./css/"
+css_path="./res/css/"
 css_final="style.css"
-fonts="fonts/"
+template="--template=./res/template.html"
+fonts="./res/fonts/"
 images="img/"
-
-template="--template=./template/template.html"
+filename="cv"
+public_filename="index"
 
 case $1 in
   debug)
@@ -17,9 +18,13 @@ case $1 in
   example)
     indir="example/"
     outdir="example_build/"
-    css_path="./css/"
   ;;
+  public)
+    filename=$public_filename
+    public="--variable=public"
 esac
+
+mkdir -p ${outdir}
 
 # create css argument
 css=""
@@ -29,7 +34,7 @@ done
 cat ${css} > ${outdir}${css_final}
 
 # copy fonts
-cp -ru ${fonts} ${outdir}
+cp -ru ${fonts} ${outdir} 2> /dev/null
 # copy images
 cp -ru ${indir}${images} ${outdir} 2> /dev/null
 
@@ -37,7 +42,8 @@ echo "running pandoc"
 pandoc -s \
   --from=markdown+smart \
   --to=html5 \
-  -o $outdir/cv.html \
+  $public \
+  -o $outdir/$filename.html \
   $indir/*.md \
   --css=${css_final} \
   $template
@@ -51,14 +57,14 @@ if [[ "$1" = "pdf" ]] || [[ "$1" = "example" ]]; then
     --margin-left 15 \
     --margin-right 15 \
     --margin-bottom 15 \
-    $outdir/cv.html \
-    $outdir/cv.pdf
+    $outdir/$filename.html \
+    $outdir/$filename.pdf
 fi
 
 if [[ "$1" = "example" ]]; then
   echo "running wkhtmltoimage"
   wkhtmltoimage \
-    $outdir/cv.html \
-    $outdir/cv.jpg
+    $outdir/$filename.html \
+    $outdir/$filename.jpg
 fi
 exit

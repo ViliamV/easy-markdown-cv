@@ -21,19 +21,7 @@
   dd {
     margin-top: 0;
   }
-  .legend {
-    width: unset;
-    float: unset;
-    position: unset;
-    text-align: unset;
-  }
-  .item {
-    grid-template-columns: auto;
-    grid-template-rows: 1.75em auto auto auto auto;
-  }
-  .item p img {
-    display: none;
-  }
+
   #details {
     text-align: left;
     margin-left: 0;
@@ -46,6 +34,12 @@
   header {
     padding-top: 0;
     flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 3em;
   }
 
   .logo {

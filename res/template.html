@@ -4,20 +4,14 @@
     <meta charset="utf-8" />
     <meta name="generator" content="pandoc" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="Description" content="Personal resume">
     <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
     <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-      $if(quotes)$
-      q { quotes: "“" "”" "‘" "’"; }
-      $endif$
-      $if(color)$
-      :root {--sp: $color$;}
-      $else$
-      :root {--sp: #20b1f4;}
-      $endif$
+$if(color)$
+:root {--sp: $color$;}
+$else$
+:root {--sp: #20b1f4;}
+$endif$
     </style>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,400,700" rel="stylesheet">
     $for(css)$
@@ -29,44 +23,26 @@
     $include-before$
     $endfor$
     <header>
-      $if(photo)$
-      <img id="photo" src="$photo$" />
-      $endif$
+      $if(photo)$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
       <div id="name">
         <h1>$firstname$</h1>
         <h1><strong>$lastname$</strong></h1>
       </div>
       <div id="details">
         <ul>
-          $if(public)$
-            $if(public-email)$
-              <li id="mail"><a href="mailto:$public-email$">Contact</a></li>
-            $else$
-              $if(email)$
-                <li id="mail"><a href="mailto:$email$">Contact</a></li>
-              $endif$
-            $endif$
-          $else$
-            $if(address)$
-              <li id="address">$address$</li>
-            $endif$
-            $if(email)$
-              <li id="mail"><a href="mailto:$email$">$email$</a></li>
-            $endif$
-            $if(website)$
-              <li id="homepage"><a href="https://$website$/" target="_blank">$website$</a></li>
-            $endif$
-            $if(mobile)$
-              <li id="phone">$mobile$</li>
-            $endif$
-          $endif$
-
-          $if(github)$
-          <li id="github"><a href="https://github.com/$github$" target="_blank">$github$</a></li>
-          $endif$
-          $if(gitlab)$
-          <li id="gitlab"><a href="https://gitlab.com/users/$gitlab$/projects" target="_blank">$gitlab$</a></li>
-          $endif$
+        $if(public)$
+          $if(public-email)$<li id="mail"><a href="mailto:$public-email$">Contact</a></li>$endif$
+          $if(website)$<li id="homepage"><a href="https://$website$/" target="_blank">$website$</a></li>$endif$
+          $if(github)$<li id="github"><a href="https://github.com/$github$" target="_blank">$github$</a></li>$endif$
+          $if(gitlab)$<li id="gitlab"><a href="https://gitlab.com/users/$gitlab$/projects" target="_blank">$gitlab$</a></li>$endif$
+        $else$
+          $if(address)$<li id="address">$address$</li>$endif$
+          $if(email)$<li id="mail"><a href="mailto:$email$">$email$</a></li>$endif$
+          $if(website)$<li id="homepage"><a href="https://$website$/" target="_blank">$website$</a></li>$endif$
+          $if(mobile)$<li id="phone">$mobile$</li>$endif$
+          $if(github)$<li id="github"><a href="https://github.com/$github$" target="_blank">$github$</a></li>$endif$
+          $if(gitlab)$<li id="gitlab"><a href="https://gitlab.com/users/$gitlab$/projects" target="_blank">$gitlab$</a></li>$endif$
+        $endif$
         </ul>
       </div>
     </header>

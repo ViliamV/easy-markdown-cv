@@ -101,3 +101,5 @@ TODO: picture
 
 ## Icons
 Icons by [Feather](https://github.com/feathericons/feather)
+
+Inspiration - [Pandoc ModernCV](https://github.com/barraq/pandoc-moderncv)

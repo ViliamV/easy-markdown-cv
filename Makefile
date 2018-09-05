@@ -20,3 +20,6 @@ public:
 .PHONY: example
 example:
 	./build.sh example
+	git add example_build/
+	git commit -m "new example"
+	git push

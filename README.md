@@ -83,6 +83,12 @@ TODO: picture
 configured in header file in `src/01_basics.md`
 TODO: picture
 
+### Force page break
+
+```markdown
+## Skills{.new-page}
+```
+
 ## Example CV
 
 ![Example JPG](./example_build/cv.jpg)

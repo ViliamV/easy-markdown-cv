@@ -20,6 +20,3 @@ public:
 .PHONY: example
 example:
 	./build.sh example
-
-clean:
-	rm build/* -f

@@ -1,7 +1,7 @@
 @media print {
   * {
     background: white !important;
-    /* color: black !important; */
+    color: black !important;
     filter: none !important;
     -ms-filter: none !important;
   }

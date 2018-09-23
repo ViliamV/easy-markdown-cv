@@ -668,14 +668,14 @@ dd:last-child {
 }
 
 #name h1 strong {
-  color: #20b1f4;
-  color: var(--sp);
+  color: #20b1f4 !important;
+  color: var(--sp) !important;
   letter-spacing: 0px;
 }
 @media print {
   * {
     background: white !important;
-    /* color: black !important; */
+    color: black !important;
     filter: none !important;
     -ms-filter: none !important;
   }
@@ -814,5 +814,16 @@ dd:last-child {
   body {
     font-size: 12px;
     margin: 0 1em;
+  }
+}
+@media print {
+  :root {
+    --fg: black !important;
+    --fg-light: black !important;
+    --sp-light: black !important;
+    --sp: black !important;
+  }
+  #photo {
+    display: none;
   }
 }

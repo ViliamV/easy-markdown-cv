@@ -4,6 +4,7 @@ title: Résumé
 firstname: John
 lastname: Doe
 photo: img/photo.jpg
+# pdfphoto: img/photo_pdf.jpg
 # qrcode: images/qrcode.png
 # website: viliamvalent.com
 email: john@doe.email

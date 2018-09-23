@@ -3,6 +3,8 @@
 You need to have [**pandoc**](https://pandoc.org/) and [**wkhtmltopdf**](https://wkhtmltopdf.org/)
 installed in order to create HTML (pandoc) and PDF (wkhtmltopdf) files.
 
+Great benefit is that you don't need to have LaTeX installed in order to produce PDF.
+
 ## Start
 
 - create directory `src` (directory name can be changed in `build.sh`)
@@ -30,6 +32,7 @@ installed in order to create HTML (pandoc) and PDF (wkhtmltopdf) files.
      firstname: Name
      lastname: Name
      photo: img/photo.jpg
+     pdfphoto: img/photo_pdf.jpg
      website: website.com
      email: Name@Name.com
      public-email: Name-public@Name.com
@@ -88,6 +91,9 @@ TODO: picture
 ```markdown
 ## Skills{.new-page}
 ```
+
+### Black&White PDF for printing
+[Link here](./example_build/cv_bw.pdf)
 
 ## Example CV
 

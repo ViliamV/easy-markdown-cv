@@ -248,7 +248,7 @@ dd:last-child {
 }
 
 #name h1 strong {
-  color: #20b1f4;
-  color: var(--sp);
+  color: #20b1f4 !important;
+  color: var(--sp) !important;
   letter-spacing: 0px;
 }

@@ -23,7 +23,12 @@ $endif$
     $include-before$
     $endfor$
     <header>
-      $if(photo)$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
+      $if(photo)$
+        $if(pdfphoto)$
+          $if(usepdfphoto)$<img id="photo" src="$pdfphoto$" alt="profile picture"/>
+          $else$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
+        $else$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
+      $endif$
       <div id="name">
         <h1>$firstname$</h1>
         <h1><strong>$lastname$</strong></h1>

@@ -816,14 +816,3 @@ dd:last-child {
     margin: 0 1em;
   }
 }
-@media print {
-  :root {
-    --fg: black !important;
-    --fg-light: black !important;
-    --sp-light: black !important;
-    --sp: black !important;
-  }
-  #photo {
-    display: none;
-  }
-}

@@ -11,7 +11,7 @@
   font-display: optional;
 }
 h2:before, span:before, li:before, span:after {
-  font-family: 'icomoon' !important;
+  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;

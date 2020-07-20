@@ -29,13 +29,13 @@ else
         echo "Creates pdf+jpg with variable pdfphoto if exists, should look like html version"
         ;;
       pdfbw )
-        echo " Creates pdf+jpg without photo for black and white print"
+        echo "Creates pdf+jpg without photo for black and white print"
         ;;
       pdfcolor )
-        echo " Creates pdf+jpg with photo for color print"
+        echo "Creates pdf+jpg with photo for color print"
         ;;
       debug )
-        echo " Creates html with debug.css"
+        echo "Creates html with debug.css"
         ;;
     esac
     exit

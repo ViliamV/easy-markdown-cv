@@ -15,8 +15,10 @@ Docker is the only requirement, pre-built image is available [**here**](https://
 
 ```
 docker build . -t easy-markdown-cv -f docker/Dockerfile
-export IMAGE=easy-markdown-cv
 ```
+
+And use `make -e IMAGE=easy-markdown-cv` instead of just `make`
+
 
 ## Start
 

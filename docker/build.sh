@@ -43,6 +43,7 @@ else
 fi
 
 indir="/data/$CV_SOURCE/"
+[[ ! -d "$indir" ]] && echo "Source directory $CV_SOURCE does not exists!" && exit 1
 outdir="/data/$CV_OUTPUT/"
 
 css_files=(fonts icons normalize style print media)

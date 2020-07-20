@@ -1,5 +1,8 @@
 #!/bin/sh
 
 IMAGE=${IMAGE:-"viliamv/easy-markdown-cv"}
-TAG=${TAG:-"latest"}
-docker run -t -v "$(pwd):/data" --user $(id -u):$(id -g) $IMAGE:$TAG $@
+TAG=${TAG:-latest}
+ENV=""
+[[ -n "$OUTPUT" ]] && ENV+=" -e CV_OUTPUT=$OUTPUT"
+[[ -n "$SOURCE" ]] && ENV+=" -e CV_SOURCE=$SOURCE"
+docker run -t $ENV -v "$(pwd):/data" --user $(id -u):$(id -g) $IMAGE:$TAG $@

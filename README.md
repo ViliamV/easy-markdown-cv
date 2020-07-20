@@ -1,29 +1,29 @@
+# Easy Markdown CV
+
+Markdown + [**pandoc**](https://pandoc.org/) + [**Puppeteer**](https://github.com/puppeteer/puppeteer)
+
 ## Setup
 
-You need to have [**pandoc**](https://pandoc.org/) and [**wkhtmltopdf**](https://wkhtmltopdf.org/)
-installed in order to create HTML (pandoc) and PDF (wkhtmltopdf) files.
+### Use Docker Hub image
+Docker is the only requirement, pre-built image is available [**here**](https://hub.docker.com/r/viliamv/easy-markdown-cv)
 
-Great benefit is that you don't need to have LaTeX installed in order to produce PDF.
+### Build your own image
+
+```
+docker build . -t easy-markdown-cv -f docker/Dockerfile
+export IMAGE=easy-markdown-cv
+```
 
 ## Start
 
-- create directory `src` (directory name can be changed in `build.sh`)
-    - alternatively copy `example` directory
+- create directory `src` (directory name can be changed by setting `SOURCE` env variable)
+- alternatively copy `example` directory
 
     ```shell
     cp -r example/ src/
     ```
 
-- to that directory put markdown files that contain your CV, for example:
-
-    ```shell
-    ~ ls src
-    01_basics.yml     03_education.md     05_skills.md         07_interests.md
-    02_experience.md  04_publications.md  06_side_projects.md  img/
-    ```
-
-    notice the directory `img`, it contains the profile photo.
-- first file should contain header for pandoc that looks something like this
+- create/edit `src/variables.yaml` file that contains header for pandoc.
 
     ```yaml
      ---
@@ -44,19 +44,30 @@ Great benefit is that you don't need to have LaTeX installed in order to produce
      color: #ff0000
      ---
     ```
+- create/edit other files (markdown) in order in which they should appear in CV
+
+    ```shell
+    ~ ls src
+    variables.yml     03_education.md     05_skills.md         07_interests.md
+    02_experience.md  04_publications.md  06_side_projects.md  img/
+    ```
+
+    notice the directory `img`, it contains the profile photo.
 
 - that's it!
 
 ## Usage
 
-Just run `make` or `./build.sh pdf && ./build.sh public` to create your CV.
-Default build directory is `build`
+All examples use *GNU Make* and `Makefile` in this repository.
+
+Just run `make` or `./run pdf && ./run public` to create your CV.
+Default build directory is `output`
 
 ## Features
 
 ### Header
 
-configured in header file in `src/01_basics.md`
+configured in header file in `src/variables.yml`
 TODO: picture
 
 ### Sections
@@ -94,17 +105,17 @@ TODO: picture
 ```
 
 ### Black&White PDF for printing
-[Link here](./output/pdf/cv_bw.pdf)
+[Link here](./example_output/cv_bw.pdf)
 
 ## Example CV
 
-![Example JPG](./output/pdf/cv.jpg)
+![Example JPG](./example_output/cv.jpg)
 
-[PDF](./output/pdf/cv.pdf)
+[PDF](./example_output/cv.pdf)
 
-[HTML](./output/publiv/index.html)
+[HTML](./example_output/index.html)
 
-[Live preview](https://viliamv.gitlab.io/easy-markdown-cv/) TODO!
+[Live preview](https://viliamv.github.io/easy-markdown-cv/) TODO!
 
 ## Icons
 Icons by [Feather](https://github.com/feathericons/feather)

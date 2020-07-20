@@ -1,4 +1,7 @@
 @media print {
+  * {
+    color: black !important;
+  }
   :root {
     --fg: black !important;
     --fg-light: black !important;

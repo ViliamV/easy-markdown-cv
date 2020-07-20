@@ -13,7 +13,8 @@ $else$
 :root {--sp: #20b1f4;}
 $endif$
     </style>
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,400,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,400,700&display=swap" rel="stylesheet">
     $for(css)$
     <link rel="stylesheet" href="$css$" />
     $endfor$
@@ -24,10 +25,12 @@ $endif$
     $endfor$
     <header>
       $if(photo)$
-        $if(pdfphoto)$
-          $if(usepdfphoto)$<img id="photo" src="$pdfphoto$" alt="profile picture"/>
+        $if(usepdfphoto)$
+          $if(pdfphoto)$<img id="photo" src="$pdfphoto$" alt="profile picture"/>
           $else$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
-        $else$<img id="photo" src="$photo$" alt="profile picture"/>$endif$
+        $else$
+          <img id="photo" src="$photo$" alt="profile picture"/>
+        $endif$
       $endif$
       <div id="name">
         <h1>$firstname$</h1>
@@ -58,7 +61,7 @@ $endif$
     $include-after$
     $endfor$
     <footer>
-      Created using <a href="https://gitlab.com/ViliamV/easy-markdown-cv" target="_blank">Easy Markdown CV</a>
+      Created using <a href="https://github.com/ViliamV/easy-markdown-cv" target="_blank">Easy Markdown CV</a>
     </footer>
   </body>
 </html>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:100,300,400,700&display=swap');
 @font-face {
   font-family: 'icomoon';
   src:  url('fonts/icomoon.eot?xgje6t');
@@ -7,8 +8,8 @@
     url('fonts/icomoon.svg?xgje6t#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
 }
-
 h2:before, span:before, li:before, span:after {
   font-family: 'icomoon' !important;
   speak: none;
@@ -435,7 +436,7 @@ html {
 body {
   color: #4e656d;
   color: var(--fg-light);
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 16px;
   line-height: 1.5;
   padding: 0;
@@ -521,7 +522,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--fg);
   line-height: 100%;
   font-weight: 300;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0.5em 0;
 }
@@ -608,7 +609,7 @@ dt {
   font-size: 1em;
   text-align: right;
   width: 9.5em;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0px;
 }
 
@@ -627,7 +628,7 @@ dd p:first-child strong:first-of-type {
   color: #253f4a;
   color: var(--fg);
   line-height: 100%;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 dd p:first-child em:first-of-type {
@@ -636,7 +637,7 @@ dd p:first-child em:first-of-type {
   color: #253f4a;
   color: var(--fg);
   line-height: 100%;
-  font-family: Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
 }
 
@@ -675,9 +676,9 @@ dd:last-child {
 @media print {
   * {
     background: white !important;
-    color: black !important;
     filter: none !important;
     -ms-filter: none !important;
+    -webkit-print-color-adjust: exact;
   }
 
   body {
@@ -686,7 +687,7 @@ dd:last-child {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Roboto Slab Italic", serif;
+    font-family: 'Roboto Slab', serif;
   }
 
   dt {

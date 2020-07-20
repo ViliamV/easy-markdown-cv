@@ -12,8 +12,5 @@ mobile: '+420 000 000 000'
 address: Street 1, City, State
 github: JohnDoeGithub
 gitlab: JohnDoeGitlab
-# footer: |
-#   - [yourtwitter](http://twitter.com/yourtwitter)
-#   - [yourgithub](http://github.com/yourgithub)
-#   - [yourlinkedin](linkedin.com/in/yourlinkedin)
+linkedin: JohnDoeLinkedin
 ---

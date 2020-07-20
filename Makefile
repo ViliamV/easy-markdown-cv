@@ -1,30 +1,40 @@
 .PHONY: all
-all: pdf bwpdf public
+all: pdf pdfcolor pdfbw public
 
 .PHONY: html
 html:
-	./build.sh html
+	@export CV_OUTPUT output/html
+	./run html
 
 .PHONY: debug
 debug:
-	./build.sh debug
+	@export CV_OUTPUT output/debug
+	run debug
 
 .PHONY: pdf
 pdf:
-	./build.sh pdf
+	@export CV_OUTPUT output/pdf
+	run pdf
 
-.PHONY: bwpdf
-bwpdf:
-	./build.sh bwpdf
+.PHONY: pdfbw
+pdfbw:
+	@export CV_OUTPUT output/pdf
+	run pdfbw
+
+.PHONY: pdfcolor
+pdfcolor:
+	@export CV_OUTPUT output/pdf
+	run pdfcolor
 
 .PHONY: public
 public:
-	./build.sh public
+	@export CV_OUTPUT output/public
+	run public
 
-.PHONY: example
-example:
-	./build.sh examplebwpdf
-	./build.sh example
-	git add example_build/
-	git commit -m "new example"
-	git push
+# .PHONY: example
+# example:
+# 	./build.sh examplebwpdf
+# 	./build.sh example
+# 	git add example_build/
+# 	git commit -m "new example"
+# 	git push

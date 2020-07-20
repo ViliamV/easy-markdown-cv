@@ -10,15 +10,15 @@ Great benefit is that you don't need to have LaTeX installed in order to produce
 - create directory `src` (directory name can be changed in `build.sh`)
     - alternatively copy `example` directory
 
-          ```shell
-          cp example src
-          ```
+    ```shell
+    cp -r example/ src/
+    ```
 
 - to that directory put markdown files that contain your CV, for example:
 
     ```shell
     ~ ls src
-    01_basics.md      03_education.md     05_skills.md         07_interests.md
+    01_basics.yml     03_education.md     05_skills.md         07_interests.md
     02_experience.md  04_publications.md  06_side_projects.md  img/
     ```
 
@@ -40,6 +40,7 @@ Great benefit is that you don't need to have LaTeX installed in order to produce
      address: Street 60, City, State
      github: Username
      gitlab: Username
+     linkedin: Username
      color: #ff0000
      ---
     ```
@@ -93,17 +94,17 @@ TODO: picture
 ```
 
 ### Black&White PDF for printing
-[Link here](./example_build/cv_bw.pdf)
+[Link here](./output/pdf/cv_bw.pdf)
 
 ## Example CV
 
-![Example JPG](./example_build/cv.jpg)
+![Example JPG](./output/pdf/cv.jpg)
 
-[PDF](./example_build/cv.pdf)
+[PDF](./output/pdf/cv.pdf)
 
-[HTML](./example_build/cv.html)
+[HTML](./output/publiv/index.html)
 
-[Live preview](https://viliamv.gitlab.io/easy-markdown-cv/)
+[Live preview](https://viliamv.gitlab.io/easy-markdown-cv/) TODO!
 
 ## Icons
 Icons by [Feather](https://github.com/feathericons/feather)

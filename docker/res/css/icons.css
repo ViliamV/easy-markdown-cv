@@ -1,5 +1,5 @@
 h2:before, span:before, li:before, span:after {
-  font-family: 'icomoon';
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

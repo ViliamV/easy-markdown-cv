@@ -2,6 +2,10 @@
 
 Markdown + [**pandoc**](https://pandoc.org/) + [**Puppeteer**](https://github.com/puppeteer/puppeteer)
 
+> Does exactly what it says on the tin
+
+![Example JPG](./example_output/cv.jpg)
+
 ## Setup
 
 ### Use Docker Hub image
@@ -108,8 +112,6 @@ TODO: picture
 [Link here](./example_output/cv_bw.pdf)
 
 ## Example CV
-
-![Example JPG](./example_output/cv.jpg)
 
 [PDF](./example_output/cv.pdf)
 

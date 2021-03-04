@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-set -o xtrace # Print commands before executing
-
 mkdir -p docs
-rm -f docs/*
+rm -rf docs/*
 cp -r example_output/public/* docs/
+echo "theme: jekyll-theme-minimal" > docs/_config.yml

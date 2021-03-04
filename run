@@ -1,8 +1,18 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-IMAGE=${IMAGE:-"viliamv/easy-markdown-cv"}
+# set -o xtrace # Print commands before executing
+
+IMAGE=${IMAGE:-'viliamv/easy-markdown-cv'}
 TAG=${TAG:-latest}
-ENV=""
-[[ -n "$OUTPUT" ]] && ENV+=" -e CV_OUTPUT=$OUTPUT"
-[[ -n "$SOURCE" ]] && ENV+=" -e CV_SOURCE=$SOURCE"
-docker run -t $ENV -v "$(pwd):/data" --user $(id -u):$(id -g) $IMAGE:$TAG $@
+ARGS=()
+[[ -n $OUTPUT ]] && ARGS+=("-e" "CV_OUTPUT=$OUTPUT")
+[[ -n $SOURCE ]] && ARGS+=("-e" "CV_SOURCE=$SOURCE")
+
+# Start container
+docker run -d --rm "${ARGS[@]}" -v "$(pwd):/data" --user "$(id -u)":"$(id -g)" "$IMAGE":"$TAG"
+CONTAINER_ID=$(docker ps -qn 1)
+echo "Started container $CONTAINER_ID"
+for arg in "$@"; do
+  docker exec "$CONTAINER_ID" "./build.sh" "$arg"
+done
+docker kill "$CONTAINER_ID"

@@ -1,32 +1,23 @@
 .PHONY: all
-all: pdf pdfcolor pdfbw public
+all:
+	./run pdf pdfprint pdfbw public
 
 .PHONY: html
 html:
-	@OUTPUT=output/html ./run html
+	./run html
 
 .PHONY: debug
 debug:
-	@OUTPUT=output/debug ./run debug
+	./run debug
 
 .PHONY: pdf
 pdf:
-	@OUTPUT=output/pdf ./run pdf
-
-.PHONY: pdfbw
-pdfbw:
-	@OUTPUT=output/pdf ./run pdfbw
-
-.PHONY: pdfcolor
-pdfcolor:
-	@OUTPUT=output/pdf ./run pdfcolor
+	./run pdf pdfbw pdfprint
 
 .PHONY: public
 public:
-	@OUTPUT=output/public ./run public
+	./run public
 
 .PHONY: example
 example:
-	@OUTPUT=example_output SOURCE=example ./run pdfbw
-	@OUTPUT=example_output SOURCE=example ./run pdf
-	@OUTPUT=example_output SOURCE=example ./run public
+	@OUTPUT=example_output SOURCE=example ./run pdfbw pdf public jpg

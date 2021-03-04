@@ -21,3 +21,4 @@ public:
 .PHONY: example
 example:
 	@OUTPUT=example_output SOURCE=example ./run pdfbw pdf public jpg
+	./mkdocs
